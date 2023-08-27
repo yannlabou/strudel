@@ -1,5 +1,5 @@
 add_executable(echo echo.cpp)
-target_link_libraries(echo PRIVATE compiler-warnings)
-target_link_libraries(echo PRIVATE fmt::fmt)
-
+target_compile_features(echo PRIVATE cxx_std_20)
+set_target_properties(echo PROPERTIES CXX_EXTENSIONS OFF)
+target_link_libraries(echo PRIVATE compiler-warnings fmt::fmt nlohmann_json::nlohmann_json)
 set_target_properties(echo PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")

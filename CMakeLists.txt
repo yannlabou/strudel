@@ -1,11 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
 project(Strudel VERSION 1.0.0 LANGUAGES CXX)
-
-if (NOT DEFINED CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD_REQUIRED ON)
-  set(CMAKE_CXX_STANDARD 20)
-endif()
-set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Link against this 'library' to use the warnings specified in cmake/compiler-warnings.cmake
